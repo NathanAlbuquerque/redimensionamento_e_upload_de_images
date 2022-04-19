@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/upload', [UploadController::class, 'index']);
+Route::get('/upload', [UploadController::class, 'index'])->name('upload');

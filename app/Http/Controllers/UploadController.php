@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\File;
 
 class UploadController extends Controller
 {
@@ -24,7 +25,7 @@ class UploadController extends Controller
             $fileModel->save();
             return back()
             ->with('sucesso','O arquivo foi carregado.')
-            ->with('file', $filename);
+            ->with('file', $fileName);
         }
     }
 }
